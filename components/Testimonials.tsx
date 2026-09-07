@@ -143,16 +143,16 @@ const Testimonials: React.FC = () => {
   return (
     <section
       id="testimonials"
-      className="section-domu bg-[var(--domu-bg)] relative overflow-hidden"
+      className="section-domu tone-soft relative overflow-hidden"
     >
       <BrandGhosts variant="spread" />
 
       <div className="mx-auto w-full max-w-[92rem] page-pad-x relative z-10">
         <AnimateOnScroll>
           <div className="text-center section-head-domu">
-            <span className="tag-domu mb-3 block">Feedback dos clientes</span>
+            <span className="tag-domu mb-3 block">Quem já confia na Domu</span>
             <h2 className="h2-domu text-gradient">
-              Clientes e avaliações
+              Empresas que cresceram com a gente
             </h2>
           </div>
         </AnimateOnScroll>

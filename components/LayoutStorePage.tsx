@@ -368,7 +368,7 @@ const LayoutStorePage: React.FC = () => {
                         className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--domu-accent)]/10 border border-[var(--domu-accent)]/20 rounded-full mb-8"
                     >
                         <SparklesIcon className="w-4 h-4 text-[var(--domu-accent)]" />
-                        <span className="text-[var(--domu-accent)] font-black text-[10px] uppercase tracking-[0.3em]">Catálogo Exclusivo Domu</span>
+                        <span className="text-[var(--domu-accent)] font-black text-[10px] uppercase tracking-[0.3em]">Catálogo da plataforma</span>
                     </motion.div>
 
                     <motion.h1
@@ -377,8 +377,7 @@ const LayoutStorePage: React.FC = () => {
                         transition={{ delay: 0.1 }}
                         className="h1-domu text-white mb-8 italic"
                     >
-                        Layouts <span className="text-gradient">profissionais</span> <br />
-                        de alta performance
+                        Layouts prontos para <span className="text-gradient">aplicar na conta</span>
                     </motion.h1>
 
                     <motion.p
@@ -387,7 +386,8 @@ const LayoutStorePage: React.FC = () => {
                         transition={{ delay: 0.2 }}
                         className="p-domu text-white/50 max-w-3xl mx-auto"
                     >
-                        Explore nossa coleção de layouts premium prontos para implementação. Design impecável aliado à tecnologia de ponta para converter visitantes em clientes.
+                        Explore o catálogo público. Para contratar e personalizar, entre na plataforma:
+                        login → painel → layouts da sua conta.
                     </motion.p>
                 </div>
             </section>
@@ -416,7 +416,7 @@ const LayoutStorePage: React.FC = () => {
                                             <div className="text-white font-black text-xs uppercase tracking-[0.25em] mb-1">
                                                 Design Concept
                                             </div>
-                                            <div className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--domu-accent)] drop-shadow-[0_0_8px_rgba(0,71,255,0.5)]">
+                                            <div className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--domu-accent)] drop-shadow-[0_0_8px_rgba(10,10,11,0.35)]">
                                                 EM BREVE
                                             </div>
                                         </div>
@@ -424,8 +424,8 @@ const LayoutStorePage: React.FC = () => {
                                     
                                     {/* Overlay Buttons */}
                                     <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-sm">
-                                        <Link to="/chatbot-placeholder" className="btn-budget">
-                                            Tenho Interesse
+                                        <Link to="/login" className="btn-budget">
+                                            Usar no painel
                                         </Link>
                                     </div>
                                 </div>
@@ -456,10 +456,10 @@ const LayoutStorePage: React.FC = () => {
 
                                     <div className="flex items-center justify-between mt-auto pt-8 border-t border-white/5">
                                         <div className="flex flex-col">
-                                            <span className="text-white/20 text-[9px] font-black uppercase tracking-widest">Investimento</span>
+                                            <span className="text-white/20 text-[9px] font-black uppercase tracking-widest">Via plataforma</span>
                                             <span className="text-white font-black text-lg tracking-tighter">{layout.price}</span>
                                         </div>
-                                        <Link to="/chatbot-placeholder" className="flex items-center justify-center w-12 h-12 bg-white/5 border border-white/10 rounded-2xl hover:bg-[var(--domu-accent)] hover:border-[var(--domu-accent)] text-white transition-all duration-500">
+                                        <Link to="/login" className="flex items-center justify-center w-12 h-12 bg-white/5 border border-white/10 rounded-2xl hover:bg-[var(--domu-accent)] hover:border-[var(--domu-accent)] text-white transition-all duration-500">
                                             <ShoppingBagIcon className="w-5 h-5" />
                                         </Link>
                                     </div>
@@ -487,10 +487,10 @@ const LayoutStorePage: React.FC = () => {
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
                         {[
-                            { icon: ZapIcon, title: 'Performance', desc: 'Pontuação máxima no PageSpeed.' },
-                            { icon: LayoutIcon, title: 'Design UX', desc: 'Foco total na jornada do usuário.' },
-                            { icon: SparklesIcon, title: 'Premium', desc: 'Acabamento visual de alto padrão.' },
-                            { icon: CheckIcon, title: 'Pronto', desc: 'Deploy em tempo recorde.' }
+                            { icon: ZapIcon, title: 'Performance', desc: 'Templates pensados para velocidade e SEO.' },
+                            { icon: LayoutIcon, title: 'No painel', desc: 'Escolha e personalize depois do login.' },
+                            { icon: SparklesIcon, title: 'Catálogo', desc: 'Vitrine pública; contratação na conta.' },
+                            { icon: CheckIcon, title: 'Fase 1', desc: 'Templates fixos, sem rebuild a cada cliente.' }
                         ].map((item, i) => (
                             <AnimateOnScroll key={i} delay={i * 100}>
                                 <div className="flex flex-col gap-6">
@@ -514,19 +514,27 @@ const LayoutStorePage: React.FC = () => {
                         
                         <div className="relative z-10 max-w-3xl">
                              <h2 className="h1-domu text-2xl md:text-4xl text-white mb-8 italic">
-                                Quer um projeto <br />
-                                <span className="text-gradient">totalmente exclusivo?</span>
+                                Quer aplicar um layout <br />
+                                <span className="text-gradient">na sua conta Domu?</span>
                             </h2>
                             <p className="p-domu text-white/50 text-lg mb-12">
-                                Se nenhum de nossos layouts prontos atende sua visão, nossa equipe de design pode criar algo do absoluto zero para sua marca.
+                                Crie a conta, entre no painel e escolha o template. Se precisar de algo fora do catálogo, o pedido sob medida também nasce de dentro da plataforma.
                             </p>
-                            <a 
-                                href="/chatbot-placeholder"
-                                className="btn-budget inline-flex items-center gap-2"
-                            >
-                                Solicitar Orçamento Customizado
-                                <ArrowRightIcon className="w-4 h-4" />
-                            </a>
+                            <div className="flex flex-col sm:flex-row gap-3">
+                                <Link
+                                    to="/login"
+                                    className="btn-budget inline-flex items-center gap-2"
+                                >
+                                    Criar conta
+                                    <ArrowRightIcon className="w-4 h-4" />
+                                </Link>
+                                <Link
+                                    to="/painel"
+                                    className="btn-domu-outline inline-flex items-center gap-2"
+                                >
+                                    Abrir painel (demo)
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

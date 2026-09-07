@@ -6,35 +6,35 @@ import BrandGhosts from './BrandGhosts';
 
 const STEPS = [
     {
-        title: 'Escolha do Projeto',
-        desc: 'Definimos se seu negócio precisa de um Site Institucional, Landing Page de alta conversão ou Loja Virtual robusta.',
+        title: 'Crie sua conta',
+        desc: 'Cadastre-se na Domu em poucos minutos e entre no painel da plataforma.',
         icon: DesktopTower,
     },
     {
-        title: 'Definição de Recursos',
-        desc: 'Escolha as funcionalidades: SEO avançado, Blogs, Multi-idioma, Dashboards Inteligentes e Integrações de Pagamento.',
+        title: 'Escolha o que precisa',
+        desc: 'Site, automação, layout ou outro serviço: selecione, personalize e defina o plano no painel.',
         icon: GearSix,
     },
     {
-        title: 'Início e Execução',
-        desc: 'Com briefing estratégico e contrato, nosso squad inicia o design e código para colocar sua visão no ar o quanto antes.',
+        title: 'Gerencie no painel',
+        desc: 'Acompanhe status, edite o que for permitido e evolua sua operação digital em um só lugar.',
         icon: Lightning,
     },
 ] as const;
 
 const Values: React.FC = () => {
     return (
-        <section id="values" className="section-domu bg-[var(--domu-bg)] relative overflow-hidden">
+        <section id="values" className="section-domu tone-paper relative overflow-hidden">
             <BrandGhosts variant="spread" />
             <div className="mx-auto w-full max-w-[92rem] page-pad-x relative z-10">
                 <AnimateOnScroll>
                     <div className="text-center section-head-domu max-w-3xl mx-auto">
                         <span className="tag-domu mb-4 block">
-                            Workflow Domu Tech
+                            Como funciona a Domu
                         </span>
                         <h2 className="h2-domu text-gradient">
-                            Como transformamos<br />
-                            sua ideia em realidade
+                            Da conta ao painel,<br />
+                            sem burocracia
                         </h2>
                     </div>
                 </AnimateOnScroll>
@@ -44,7 +44,7 @@ const Values: React.FC = () => {
                         const Icon = step.icon;
                         return (
                             <AnimateOnScroll key={step.title} delay={index * 120}>
-                                <article className="group relative flex flex-col h-full rounded-2xl bg-[var(--domu-surface-1)] border border-[var(--domu-border)] p-6 md:p-7 overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:border-[var(--domu-accent)]/40 hover:shadow-[0_28px_50px_-32px_rgba(0,71,255,0.35)]">
+                                <article className="group relative flex flex-col h-full rounded-2xl bg-[var(--domu-surface-1)] border border-[var(--domu-border)] p-6 md:p-7 overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:border-[var(--domu-accent)]/40 hover:shadow-[0_28px_50px_-32px_rgba(10,10,11,0.28)]">
                                     <div className="absolute inset-x-0 top-0 h-[3px] bg-[var(--domu-accent)] -translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
 
                                     <div className="flex items-center justify-between gap-3 mb-6">

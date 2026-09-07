@@ -19,7 +19,7 @@ const FAQ: React.FC = () => {
   return (
     <section
       id="faq"
-      className="section-domu bg-[var(--domu-bg)] relative overflow-hidden"
+      className="section-domu tone-mist relative overflow-hidden"
     >
       <BrandGhosts variant="default" />
 
@@ -27,7 +27,7 @@ const FAQ: React.FC = () => {
         <AnimateOnScroll>
           <div className="text-center section-head-domu">
             <span className="tag-domu mb-3 block">
-              SOLUÇÕES DIGITAIS DE PONTA
+              PLATAFORMA DOMU
             </span>
             <h2 className="h2-domu text-gradient">Perguntas Frequentes</h2>
           </div>
@@ -80,7 +80,7 @@ const FAQItem: React.FC<{
   onToggle: (id: string) => void;
 }> = ({ id, question, answer, isOpen, onToggle }) => {
   return (
-    <div className="bg-[var(--domu-surface-1)] border border-[var(--domu-border)] rounded-xl overflow-hidden transition-all duration-300 hover:border-[var(--domu-accent)]/25 hover:shadow-[0_12px_32px_-16px_rgba(0,71,255,0.2)] group">
+    <div className="bg-[var(--domu-surface-1)] border border-[var(--domu-border)] rounded-xl overflow-hidden transition-all duration-300 hover:border-[var(--domu-accent)]/25 hover:shadow-[0_12px_32px_-16px_rgba(10,10,11,0.18)] group">
       <button
         type="button"
         onClick={() => onToggle(id)}

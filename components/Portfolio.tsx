@@ -222,7 +222,7 @@ const Portfolio: React.FC = () => {
     /* ── Render ─────────────────────────────────────────────────────────────── */
 
     return (
-        <section id="portfolio" className="section-domu bg-[var(--domu-bg)] overflow-hidden relative">
+        <section id="portfolio" className="section-domu tone-soft overflow-hidden relative">
             {/* Branding Ghosts Constellation - Forced to Background */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.05] z-0">
                 <img src="/fraucon.png" className="absolute top-[15%] left-[5%] w-32 h-32 animate-float object-contain" alt="" />
@@ -363,7 +363,7 @@ const Portfolio: React.FC = () => {
                                 href={project.link}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="group flex flex-col h-full rounded-2xl overflow-hidden bg-[var(--domu-surface-1)] border border-[var(--domu-border)] shadow-[0_16px_40px_-28px_rgba(10,15,24,0.2)] transition-all duration-500 hover:-translate-y-1.5 hover:border-[var(--domu-accent)]/35 hover:shadow-[0_24px_48px_-28px_rgba(0,71,255,0.28)]"
+                                className="group flex flex-col h-full rounded-2xl overflow-hidden bg-[var(--domu-surface-1)] border border-[var(--domu-border)] shadow-[0_16px_40px_-28px_rgba(10,10,11,0.2)] transition-all duration-500 hover:-translate-y-1.5 hover:border-[var(--domu-accent)]/35 hover:shadow-[0_24px_48px_-28px_rgba(10,10,11,0.22)]"
                             >
                                 <div className="relative w-full aspect-[16/10] overflow-hidden bg-[var(--domu-surface-2)]">
                                     <img

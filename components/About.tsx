@@ -1,24 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import AnimateOnScroll from './AnimateOnScroll';
 import BrandGhosts from './BrandGhosts';
 import { ArrowUpRightIcon } from './icons';
 
 const STEPS = [
     {
-        title: 'Descoberta',
-        text: 'Entendemos seu negócio e definimos o desafio central.',
+        title: 'Conta',
+        text: 'Você cria o login e entra na plataforma Domu.',
     },
     {
-        title: 'Direção',
-        text: 'Organizamos prioridades, escopo e o plano de ação.',
+        title: 'Escolha',
+        text: 'Seleciona o serviço ou template que faz sentido pro negócio.',
     },
     {
-        title: 'Construção',
-        text: 'Design e tecnologia dão forma à solução.',
+        title: 'Personalização',
+        text: 'Ajusta conteúdo, plano e detalhes direto no painel.',
     },
     {
-        title: 'Evolução',
-        text: 'Lançamos, medimos resultados e seguimos evoluindo.',
+        title: 'Operação',
+        text: 'Publica, acompanha e evolui tudo em um só lugar.',
     },
 ] as const;
 
@@ -32,10 +33,10 @@ const About: React.FC = () => {
 
                     <AnimateOnScroll>
                         <div className="process-pro-card__header">
-                            <p>Nosso método</p>
-                            <h2>Da primeira conversa ao resultado.</h2>
+                            <p>Como a plataforma funciona</p>
+                            <h2>Do login ao resultado, no seu ritmo.</h2>
                             <span>
-                                Um caminho objetivo, com decisões claras em cada etapa.
+                                Um fluxo simples: conta, escolha, personalização e operação contínua.
                             </span>
                         </div>
                     </AnimateOnScroll>
@@ -61,11 +62,11 @@ const About: React.FC = () => {
 
                     <AnimateOnScroll delay={220}>
                         <div className="process-pro-card__footer">
-                            <p>Tem um desafio em mente?</p>
-                            <a href="/chatbot-placeholder" className="btn-budget group">
-                                Vamos conversar
+                            <p>Quer começar agora?</p>
+                            <Link to="/login" className="btn-budget group">
+                                Criar conta
                                 <ArrowUpRightIcon className="w-4 h-4" />
-                            </a>
+                            </Link>
                         </div>
                     </AnimateOnScroll>
                 </div>

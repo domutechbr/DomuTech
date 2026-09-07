@@ -24,50 +24,50 @@ type StatItem = {
 const STATS: StatItem[] = [
   {
     value: '15+',
-    label: 'Projetos Entregues',
-    desc: 'Sites, sistemas e soluções digitais no ar com performance de ponta.',
+    label: 'Projetos na base',
+    desc: 'Sites e soluções que validam o modelo da plataforma Domu.',
     icon: Briefcase,
   },
   {
     value: '3+',
-    label: 'Anos de Mercado',
-    desc: 'Experiência contínua entregando tecnologia sob medida.',
+    label: 'Anos de mercado',
+    desc: 'Experiência que agora vira produto: conta, painel e serviços digitais.',
     icon: CalendarBlank,
   },
   {
     value: '95+',
-    label: 'Performance Média',
-    desc: 'Velocidade, SEO e conversão em cada entrega.',
+    label: 'Performance média',
+    desc: 'Velocidade, SEO e conversão como padrão das entregas na plataforma.',
     icon: ChartLineUp,
   },
   {
     value: '12+',
     label: 'Tecnologias',
-    desc: 'Stacks modernas para sites, apps e automações.',
+    desc: 'Stack moderna por trás do painel, dos sites e das automações.',
     icon: CodeBlock,
   },
   {
     value: '40+',
-    label: 'Clientes Atendidos',
-    desc: 'Empresas que confiam na Domu para crescer no digital.',
+    label: 'Empresas atendidas',
+    desc: 'Negócios que já confiaram na Domu e agora entram pelo mesmo funil de conta.',
     icon: UsersThree,
   },
   {
-    value: '100%',
-    label: 'Entrega Sob Medida',
-    desc: 'Cada projeto pensado para o negócio, sem template genérico.',
+    value: '1',
+    label: 'Painel único',
+    desc: 'Contrate e gerencie serviços sem trocar de ferramenta a cada projeto.',
     icon: SealCheck,
   },
   {
-    value: '98%',
-    label: 'Satisfação',
-    desc: 'Clientes que recomendam a Domu após a entrega.',
+    value: '24h',
+    label: 'Acesso à conta',
+    desc: 'Sua operação digital disponível quando você precisar.',
     icon: Headset,
   },
   {
-    value: '48h',
-    label: 'Resposta Inicial',
-    desc: 'Retorno rápido no primeiro contato.',
+    value: '3',
+    label: 'Passos para começar',
+    desc: 'Criar conta, escolher o serviço e personalizar no painel.',
     icon: Lightning,
   },
 ];
@@ -104,15 +104,15 @@ const Stats: React.FC = () => {
   const tonePattern = useMemo(createTonePattern, []);
 
   return (
-    <section id="stats" className="section-domu bg-[var(--domu-bg)] relative overflow-hidden">
+    <section id="stats" className="section-domu tone-snow relative overflow-hidden">
       <BrandGhosts variant="corners" />
 
       <div className="mx-auto w-full max-w-[92rem] page-pad-x relative z-10">
         <AnimateOnScroll>
           <div className="text-center section-head-domu max-w-2xl mx-auto">
-            <span className="tag-domu mb-4 block">Números que falam</span>
+            <span className="tag-domu mb-4 block">Números da Domu</span>
             <h2 className="h2-domu text-gradient">
-              Resultados que<br className="hidden sm:block" /> sustentam a entrega
+              Resultados que<br className="hidden sm:block" /> sustentam a plataforma
             </h2>
           </div>
         </AnimateOnScroll>

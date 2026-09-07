@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   DeviceMobileCamera,
@@ -22,50 +23,50 @@ const IconSecurity = () => <ShieldCheck className="w-5 h-5" weight="duotone" />;
 const FEATURES = [
   {
     Icon: IconResponsivo,
-    title: "Ecossistema Multiplataforma",
+    title: "Tudo em um painel",
     paragraphs: [
-      "Sua marca presente e eficiente em todos os canais digitais de forma unificada. Garantimos que sua solução seja adaptável e entregue uma experiência de uso impecável, seja no mobile, tablet ou desktop.",
-      "Através de um desenvolvimento agnóstico a dispositivos, maximizamos o alcance do seu negócio e garantimos que nenhum potencial cliente seja perdido por falhas de carregamento ou layouts quebrados em telas específicas.",
+      "Sites, layouts e serviços digitais no mesmo login. Você não precisa abrir um orçamento novo a cada necessidade.",
+      "A ideia é autonomia: entra na conta, escolhe o que precisa e acompanha o status sem depender de um funil de WhatsApp.",
     ],
   },
   {
     Icon: IconSEO,
-    title: "Visibilidade & Inteligência",
+    title: "Produtos prontos para crescer",
     paragraphs: [
-      "Não basta existir no digital, é preciso ser encontrado pelo público que realmente consome seu produto ou serviço. Aplicamos inteligência de dados, análise de concorrência e as melhores práticas de posicionamento orgânico (SEO) para que sua empresa lidere as intenções de busca.",
-      "Nosso foco é atrair tráfego qualificado de forma constante, transformando cada clique em uma jornada de valor que resulta em conversão e fidelização.",
+      "Templates e serviços pensados para conversão, performance e SEO desde o começo.",
+      "Você personaliza o que o plano libera, com foco em resultado de negócio, não só em página bonita.",
     ],
   },
   {
     Icon: IconTech,
-    title: "Tecnologia de Ponta",
+    title: "Stack moderna por baixo",
     paragraphs: [
-      "Utilizamos as stacks mais modernas e robustas do mercado, como React, Node.js e WordPress Avançado, para criar ferramentas rápidas, seguras e extremamente escaláveis.",
-      "Nosso código é limpo e otimizado para acompanhar o crescimento acelerado da sua empresa sem limitações técnicas, evitando lentidões desnecessárias que prejudicam o ranqueamento no Google e a experiência fluida do usuário final.",
+      "React, infraestrutura em nuvem e padrões de produto SaaS sustentam a plataforma.",
+      "O mesmo cuidado técnico que a Domu já usava em projetos sob medida agora vira base do painel multi-cliente.",
     ],
   },
   {
     Icon: IconConversao,
-    title: "Foco Total em Conversão",
+    title: "Contratação sem atrito",
     paragraphs: [
-      "Criamos jornadas de usuário milimetricamente focadas em resultados práticos e mensuráveis. Integramos ferramentas de automação, fluxos de vendas inteligentes e análises profundas de comportamento para entender o que faz seu cliente tomar a decisão de compra.",
-      "Transformamos cada interação digital em uma oportunidade real de negócio, otimizando seu ROI e garantindo um crescimento sustentável para sua marca no longo prazo.",
+      "O fluxo principal é criar conta e seguir no painel, no espírito Nuvemshop: landing apresenta, login abre a operação.",
+      "Menos troca de mensagem, mais caminho claro até o serviço publicado.",
     ],
   },
   {
     Icon: IconLayout,
-    title: "Design Estratégico",
+    title: "Layouts e serviços internos",
     paragraphs: [
-      "Design que comunica, encanta e, acima de tudo, vende. Desenvolvemos interfaces exclusivas e intuitivas que fortalecem o posicionamento da sua marca em um mercado altamente competitivo.",
-      "Através de estudos aprofundados de UX (User Experience) e UI (User Interface), criamos uma conexão imediata de profissionalismo e transmitimos a confiança necessária para que seu público-alvo escolha sua solução como a melhor opção disponível.",
+      "A loja de layouts e os serviços da Domu passam a viver dentro da plataforma, não como menu de agência.",
+      "Você escolhe, personaliza e opera a partir da sua conta.",
     ],
   },
   {
     Icon: IconSecurity,
-    title: "Segurança & Suporte Contínuo",
+    title: "Conta segura e contínua",
     paragraphs: [
-      "Protegemos seu patrimônio digital com protocolos de segurança de nível bancário, certificados SSL avançados e backups automáticos periódicos.",
-      "Além da entrega final, oferecemos um acompanhamento técnico próximo e consultivo para garantir que sua plataforma esteja sempre atualizada com as últimas patches de segurança, mantendo seu negócio online rápido, estável e totalmente protegido contra qualquer tipo de ameaça externa.",
+      "Acesso por login, isolamento por cliente e manutenção pensada para o serviço ficar no ar com estabilidade.",
+      "Suporte entra quando precisar, mas o dia a dia roda na sua conta.",
     ],
   },
 ];
@@ -74,7 +75,7 @@ const Features: React.FC = () => {
   return (
     <section
       id="features"
-      className="section-domu bg-[var(--domu-bg)] relative overflow-visible"
+      className="section-domu tone-mist relative overflow-visible"
     >
       <BrandGhosts variant="sides" />
       <div className="mx-auto max-w-[92rem] page-pad-x relative z-10">
@@ -112,15 +113,12 @@ const Features: React.FC = () => {
             {/* CTA below logo */}
             <div className="px-2 w-full max-w-sm">
               <h3 className="type-card-title text-gradient mb-4">
-                Pronto para decolar seu projeto digital?
+                Pronto para entrar na plataforma?
               </h3>
-              <a
-                href="/chatbot-placeholder"
-                className="btn-budget group"
-              >
+              <Link to="/login" className="btn-budget group">
                 <ArrowUpRightIcon className="w-3.5 h-3.5" />
-                Peça um Orçamento
-              </a>
+                Criar conta
+              </Link>
             </div>
           </div>
 
@@ -129,10 +127,10 @@ const Features: React.FC = () => {
             <AnimateOnScroll>
               <div className="text-left section-head-domu">
                 <span className="tag-domu mb-3 block">
-                  SOLUÇÕES DIGITAIS DE ALTO IMPACTO
+                  O QUE VOCÊ ENCONTRA NA PLATAFORMA
                 </span>
                 <h2 className="h2-domu text-gradient">
-                  Expertise em crescimento
+                  Recursos para crescer com autonomia
                 </h2>
               </div>
             </AnimateOnScroll>
